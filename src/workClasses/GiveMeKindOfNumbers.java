@@ -23,10 +23,27 @@ public class GiveMeKindOfNumbers extends Methods {
 	}
 
 	public static void printFibonacciNumbers() {
-
+		
+		 int n1 = 0, n2 = 1, num;
+		 
+	        System.out.print("Fibonacci numbers less than 100: " + n1 + " " + n2 + " ");
+	
+	        for (int i = 0; i < 10; i++) {
+	        	num = n2 + n1;
+	            System.out.print(num + " ");
+	            n1 = n2;
+	            n2 = num;
+	        }
 	}
 
 	public static void printMarsennePrimeNumbers() {
+		
+		System.out.println("Marsenne primes with p <= 31 are:");
+		for (int i = 2; i <= 34; i++) {
+	      if (isPrime(i) && isPrime((int) (Math.pow(2, i)-1))) {
+	          System.out.print(i + " ");
+	      }
+	    }
 
 	}
 
